@@ -1,19 +1,29 @@
-# Features of working with Java 8 (Part 2)
->This repository was created for homework in lessons №14 - "Features of working with Java 8 (Part 2)".
+# Regular Expression
+>This repository was created for homework in lessons №16 - "Regular Expression".
 ## Tasks
 
 ### Mandatory task:  
-0. Create a collection of the ArrayList class and fill it with random elements of type Integer.  
-Using Streams:  
-    - Remove duplicates
-    - Print all even elements in the range from 7 to 17 (inclusive)
-    - Each element multiplied by 2
-    - Sort and display the first 4 elements
-    - Display the number of elements in the stream
-    - Display the arithmetic mean of all numbers in the stream
+0. The program receives the path to the folder as input (set via the console).  
+    The specified folder contains text files (txt format).  
+    Each file contains arbitrary text. This text may contain a document number (one or more), email and phone number.  
+    document number in the format: xxxx-yyy-xxxx-yyy-xyxy, where x is any number, and y is any letter of the Russian or Latin alphabet  
+    phone number in the format: +(ХХ)ХХХХХХХ
 
-1. Create a collection of the ArrayList class with the values ​​of the names of all students in the group  
-Using Streams:
-    - Return the number of people with your name (regardless of upper/lower case letters)
-    - Select all names starting with "a" (regardless of upper/lower case letters)
-    - Sort and return the first element of the collection or "Empty" if the collection is empty
+   The document may not contain all the information, i.e. for example, may not contain a phone number, or other field.  
+    It is necessary to extract information from N text documents. The number of documents for processing N is set from the console.  
+    If the folder contains fewer documents than the specified number, all documents should be processed.  
+    The extracted information must be saved in the following data structure:
+
+           Map<String, Document>, where  
+        key of type String is the name of the document without extension,  
+        value of type Document - a custom class object whose fields contain information extracted from a text document
+
+   
+    Consider the output of messages in cases where,
+    - let the input be sent to a folder in which there are no files
+    - all files have an inappropriate format (only TXT files should be processed)
+    - also messages in case of other exceptional situations
+  
+   At the end of the program, a message should be displayed indicating how many documents were processed and how many documents were in invalid format.
+
+
